@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangama (Bharatiya Sanskriti) - Celebrating India's Cultural Diversity</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --text-primary-light: #2c3e50;
+      --text-secondary-light: #555555;
+      --bg-primary-light: #f9f7f0;
+      --bg-secondary-light: #f5f0e4;
+      --accent-light: #FF6D24;
+      --accent-secondary-light: #E63728; 
+      --border-light: #d5dbdb;
+      --gold-light: #d4af37;
+      
+      --text-primary-dark: #f8f9fa;
+      --text-secondary-dark: #adb5bd;
+      --bg-primary-dark: #1a1a2e;
+      --bg-secondary-dark: #16213e;
+      --accent-dark: #FF9933; 
+      --accent-secondary-dark: #ff7b00;
+      --border-dark: #495057;
+      --gold-dark: #ffd700;
+      --color1: #FF9933; 
+      --color2: #FFFFFF; 
+      --color3: #138808;
+      --color4: #8D3DAF; 
+      --color5: #E91E63; 
+      --color6: #d4af37; 
+    }
+    
+    body {
+      font-family: 'Poppins', 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-primary-dark);
+      color: var(--text-primary-dark);
+      transition: all 0.3s ease;
+      line-height: 1.6;
+    }
+    
+    body.light-mode {
+      background-color: var(--bg-primary-light);
+      color: var(--text-primary-light);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+ 
+    header {
+      background-image: 
+        linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
+        url('https://bombaytrooper.com/wp-content/uploads/2024/04/0_yGBBhx693nFddxTs.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    .logo {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease;
+      color: var(--gold-dark);
+    }
+    
+    .light-mode .logo {
+      color: var(--gold-light);
+    }
+    
+    .tagline {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+    
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .header-cta {
+      background-color: var(--bg-secondary-dark);
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4);
+      animation: pulse 2s infinite;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    
+    .demo-btn {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      animation: none;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+    
+    .light-mode .header-cta {
+      background-color: var(--accent-light);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    }
+    
+    .header-cta:hover {
+      background-color: var(--accent-secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 158, 0, 0.6);
+      animation: none;
+    }
+    
+    .demo-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: var(--gold-dark);
+    }
+    
+    .light-mode .header-cta:hover {
+      background-color: var(--accent-secondary-light);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+    }
+
+
+    nav {
+      background-color: var(--bg-primary-dark);
+      padding: 6px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode nav {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .nav-logo {
+      color: var(--accent-light);
+    }
+    
+    .nav-logo:hover {
+      transform: rotate(-5deg);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-primary-dark);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 4px 0;
+    }
+    
+    .light-mode .nav-links a {
+      color: var(--text-primary-light);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background-color: var(--accent-dark);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+    
+    .light-mode .nav-links a::after {
+      background-color: var(--accent-light);
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .nav-links a:hover {
+      color: var(--accent-light);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+ 
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--accent-dark);
+      font-size: 1.8rem;
+    }
+    
+    .light-mode .hamburger {
+      color: var(--accent-light);
+    }
+
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section-alt {
+      background-color: var(--bg-secondary-dark);
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      padding: 100px 0;
+      margin: 50px 0;
+    }
+    
+    .light-mode .section-alt {
+      background-color: var(--bg-secondary-dark);
+    }
+    
+    .section-header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      background-color: var(--bg-primary-dark);
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--text-primary-dark);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color1), var(--color3));
+      border-radius: 5px;
+    }
+    
+    .light-mode .section-title {
+      color: var(--text-primary-light);
+    }
+    
+    .section-description {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .section-description {
+      color: var(--text-secondary-light);
+    }
+    
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      background-color: var(--bg-secondary-dark);
+    }
+    
+    .feature-card {
+      background-color: var(--bg-secondary-dark);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+      position: relative;
+      border-top: 5px solid var(--color1);
+    }
+    
+    .feature-card:nth-child(2) {
+      border-top-color: var(--accent-secondary-light);
+    }
+    
+    .feature-card:nth-child(3) {
+      border-top-color: var(--color3);
+    }
+    
+    .feature-card:nth-child(4) {
+      border-top-color: var(--color4);
+    }
+    
+    .feature-card:nth-child(5) {
+      border-top-color: var(--color5);
+    }
+    
+    .light-mode .feature-card {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    
+    .light-mode .feature-card:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    
+    .feature-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    
+    .feature-card:hover .feature-img {
+      transform: scale(1.1);
+    }
+    
+    .feature-content {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .feature-title {
+      font-size: 1 rem;
+      margin-bottom: 15px;
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .feature-title {
+      color: var(--text-primary-light);
+    }
+    
+    .feature-description {
+      color: var(--text-secondary-dark);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .light-mode .feature-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .feature-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-link 
+    {
+      background-color: var(--bg-secondary-dark);
+    }
+
+    .light-mode .feature-link {
+      color: var(--accent-light);
+    }
+    
+    .feature-link i {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-link:hover {
+      color: var(--accent-secondary-dark);
+    }
+    
+    .light-mode .feature-link:hover {
+      color: var(--accent-secondary-light);
+    }
+    
+    .feature-link:hover i {
+      transform: translateX(5px);
+    }
+    
+    /* Vibrant CTA Section */
+    .cta-section {
+      text-align: center;
+      background-image: 
+        linear-gradient(135deg, rgba(19, 136, 8, 0.8), rgba(45, 97, 136, 0.8)),
+        url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px;
+      color: white;
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      margin: 80px 0;
+    }
+    
+    .cta-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    }
+    
+    .cta-description {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    }
+    
+    .cta-button {
+      background-color: white;
+      color: var(--color3);
+      padding: 18px 50px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    
+    .cta-button i {
+      transition: transform 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--color3);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .cta-button:hover i {
+      transform: rotate(360deg);
+    }
+    
+ 
+    .final-cta {
+  text-align: center;
+  padding: 100px 0 50px;  
+  background: var(--bg-primary-dark); 
+}
+    
+    .final-cta h2 {
+      font-size: 2.5rem;
+      color: var(--text-primary-dark);
+      margin-bottom: 20px;
+    }
+    
+    .light-mode .final-cta h2 {
+      color: var(--text-primary-light);
+    }
+    
+    .final-cta p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .final-cta p {
+      color: var(--text-secondary-light);
+    }
+    
+    .final-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .journey-btn {
+      background-color: var(--accent-secondary-light);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .light-mode .journey-btn {
+      background-color: var(--accent-light);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    }
+    
+    .journey-btn:hover {
+      background-color: var(--accent-secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 158, 0, 0.6);
+    }
+    
+    .light-mode .journey-btn:hover {
+      background-color: var(--accent-secondary-light);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+    }
+    
+    
+    .side-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .side-feature {
+      background-color: var(--bg-secondary-dark);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      text-align: center;
+      border-bottom: 4px solid var(--color1);
+    }
+    
+    .side-feature:nth-child(2) {
+      border-bottom-color: var(--color2);
+    }
+    
+    .side-feature:nth-child(3) {
+      border-bottom-color: var(--color3);
+    }
+    
+    .side-feature:nth-child(4) {
+      border-bottom-color: var(--color4);
+    }
+    
+    .side-feature:nth-child(5) {
+      border-bottom-color: var(--color5);
+    }
+    
+    .side-feature:nth-child(6) {
+      border-bottom-color: var(--color6);
+    }
+    
+    .side-feature:nth-child(7) {
+      border-bottom-color: var(--color1);
+    }
+    
+    .side-feature:nth-child(8) {
+      border-bottom-color: var(--color2);
+    }
+    
+    .light-mode .side-feature {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .side-feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    
+    .light-mode .side-feature:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .side-feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .side-feature-icon {
+      color: var(--accent-light);
+    }
+    
+    .side-feature-title {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .side-feature-title {
+      color: var(--text-primary-light);
+    }
+    
+    .side-feature-description {
+      color: var(--text-secondary-dark);
+      font-size: 1rem;
+    }
+    
+    .light-mode .side-feature-description {
+      color: var(--text-secondary-light);
+    }
+    
+   
+    footer {
+  background-color: var(--bg-primary-dark);
+  padding: 30px 0;  
+  color: var(--text-secondary-dark);
+  margin-top: 0;  
+  clip-path: none;  
+}
+    
+    .light-mode footer {
+      background-color: var(--bg-secondary-light);
+      color: var(--text-secondary-light);
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    
+    .footer-logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .footer-logo {
+      color: var(--accent-light);
+    }
+    
+    .footer-description {
+      color: var(--text-secondary-dark);
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+    
+    .light-mode .footer-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--bg-primary-dark);
+      color: var(--accent-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .social-link {
+      background-color: var(--bg-primary-light);
+      color: var(--accent-light);
+    }
+    
+    .social-link:hover {
+      background-color: var(--accent-dark);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    .light-mode .social-link:hover {
+      background-color: var(--accent-light);
+    }
+    
+    .footer-links h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--text-primary-dark);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-links h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-dark);
+      border-radius: 3px;
+    }
+    
+    .light-mode .footer-links h3 {
+      color: var(--text-primary-light);
+    }
+    
+    .light-mode .footer-links h3::after {
+      background-color: var(--accent-light);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-secondary-dark);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .light-mode .footer-links a {
+      color: var(--text-secondary-light);
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent-dark);
+      transform: translateX(5px);
+    }
+    
+    .light-mode .footer-links a:hover {
+      color: var(--accent-light);
+    }
+    
+    .copyright {
+  margin-top: 30px; 
+  text-align: center;
+  padding-top: 20px;  
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  
+  color: var(--text-secondary-dark);
+  font-size: 0.9rem;
+}
+
+.light-mode .copyright {
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  
+  color: var(--text-secondary-light);
+}
+    
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    
+    @media (max-width: 992px) {
+      .logo {
+        font-size: 3rem;
+      }
+      
+      .tagline {
+        font-size: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .cta-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary-dark);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        z-index: 99;
+      }
+      
+      .light-mode .nav-links {
+        background-color: var(--bg-primary-light);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--border-dark);
+      }
+      
+      .light-mode .nav-links a {
+        border-bottom: 1px solid var(--border-light);
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      .section-alt {
+        clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+      }
+      
+      .cta-section {
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      }
+      
+      footer {
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+      }
+      
+      .header-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .final-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+      
+      .header-cta {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.8 rem;
+      }
+      
+      .section-description {
+        font-size: 1rem;
+      }
+      
+      .cta-title {
+        font-size: 2rem;
+      }
+      
+      .cta-description {
+        font-size: 1.1rem;
+      }
+      
+      .cta-button {
+        padding: 15px 40px;
+        font-size: 1rem;
+      }
+      
+      .feature-title {
+        font-size: 1.4rem;
+      }
+      
+      .final-cta h2 {
+        font-size: 2rem;
+      }
+      
+      .final-cta p {
+        font-size: 1rem;
+      }
+    }
+
+    
+.card-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 30px 0; position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.card-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 25px;
+}
+
+.destination-card {
+  width: 280px;
+  height: 420px;
+  background-color: var(--bg-primary-dark);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.light-mode .destination-card {
+  background-color: var(--bg-primary-light);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.destination-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.destination-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 153, 51, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.destination-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+
+.destination-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--text-primary-dark);
+}
+
+.light-mode .destination-content h3 {
+  color: var(--text-primary-light);
+}
+
+
+.destination-content p {
+  color: var(--text-secondary-dark);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.light-mode .destination-content p {
+  color: var(--text-secondary-light);
+}
+
+
+.explore-link {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.light-mode .explore-link {
+  color: var(--accent-light);
+}
+
+.explore-link:hover {
+  color: var(--accent-secondary-dark);
+  transform: translateX(4px);
+}
+
+.light-mode .explore-link:hover {
+  color: var(--accent-secondary-light);
+}
+
+.explore-link i {
+  transition: transform 0.3s ease;
+}
+
+
+.explore-link {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.light-mode .explore-link {
+  color: var(--accent-light);
+}
+
+.explore-link i {
+  transition: transform 0.3s ease;
+}
+
+.explore-link:hover {
+  color: var(--accent-secondary-dark);
+}
+
+.light-mode .explore-link:hover {
+  color: var(--accent-secondary-light);
+}
+
+.explore-link:hover i {
+  transform: translateX(5px);
+}
+
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-nav-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.light-mode .slider-nav-btn:hover {
+  background-color: var(--accent-light);
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-secondary-dark);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light-mode .slider-dot {
+  background-color: var(--text-secondary-light);
+}
+
+.slider-dot.active {
+  opacity: 1;
+  background-color: var(--accent-dark);
+  transform: scale(1.2);
+}
+
+.light-mode .slider-dot.active {
+  background-color: var(--accent-light);
+}
+
+#about
+{
+  background-color: var(--bg-primary-dark);
+}
+
+
+.destination-card.active {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+
+@media (max-width: 768px) {
+  .destination-card {
+    flex: 0 0 280px;
+    height: 420px;
+  }
+  
+  .destination-image {
+    height: 200px;
+  }
+  
+  .slider-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .destination-card {
+    flex: 0 0 260px;
+    height: 400px;
+  }
+  
+  .destination-image {
+    height: 180px;
+  }
+  
+  .slider-nav-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+  </style>
+
+
+</head>
+<body>
+    
+    <header>
+      <div class="container">
+        <h1 class="logo">Sangama</h1>
+        <p class="tagline">Smart Journeys, Safe Memories.</p>
+        <div class="header-buttons">
+          <a href="#contSlider" class="header-cta">Get Started</a>
+          <a href="#about" class="header-cta demo-btn">About</a>
+        </div>
+      </div>
+    </header>
+  
+    
+    <nav>
+      <div class="container nav-container">
+        <div class="nav-logo">Sangama</div>
+        <div class="nav-links">
+          <a href="#explore">Explore</a>
+          <a href="#about">About</a>         
+          <a href="qs.html">Panda-O-Pedia</a>
+        </div>
+        <button class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+   
+<section class="section">
+  <div  id="contSlider" class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explore India</h2>
+      <p class="section-description">Discover the diverse beauty and cultural heritage of India through these breathtaking destinations</p>
+    </div>
+    
+    <div class="card-slider-container">
+      <div class="card-slider">
+        
+
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/karnataka.png')">
+            <div class="destination-number">1</div>
+          </div>
+          <div class="destination-content">
+            <h3>Coorg</h3>
+            <p>Misty hills and coffee plantations known as the 'Scotland of India' for its breathtaking landscapes.</p>
+            
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/tamilnadu.png')">
+            <div class="destination-number">2</div>
+          </div>
+          <div class="destination-content">
+            <h3>Pondicherry</h3>
+          <p>Where French charm meets Indian soul.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/rajasthan.jpg')">
+            <div class="destination-number">3</div>
+          </div>
+          <div class="destination-content">
+            <h3>Rajasthan</h3>
+            <p>Land of kings, forts, and golden sands.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/kerala.jpg')">
+            <div class="destination-number">4</div>
+          </div>
+          <div class="destination-content">
+            <h3>Kerala</h3>
+            <p>God’s own country with serene backwaters.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/rishikesh.jpg')">
+            <div class="destination-number">5</div>
+          </div>
+          <div class="destination-content">
+            <h3>Uttarakhand</h3>
+            <p>Mystic mountains and spiritual calm.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/madhya\ pradesh.jpg')">
+            <div class="destination-number">6</div>
+          </div>
+          <div class="destination-content">
+            <h3>Madhya Pradesh</h3>
+            <p>The heart of India, wild and wonderful.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/orissa.jpg')">
+            <div class="destination-number">7</div>
+          </div>
+          <div class="destination-content">
+            <h3>Orissa</h3>
+            <p>Temples, traditions, and timeless beauty.</p>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <button class="slider-nav-btn slider-prev" aria-label="Previous destination">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-nav-btn slider-next" aria-label="Next destination">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    
+    <div class="slider-pagination">
+      <div class="slider-dot active"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+    </div>
+  </div>
+</section>
+  
+   
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Smart Safety Enhancements</h2>
+          <p class="section-description">Stay informed and secure while exploring. Our safety-first features provide real-time assistance, alerts, and essential guidance for a worry-free travel experience.</p>
+        </div>
+        <div class="features">
+          <div class="feature-card">
+            <img src="images/MAP.jpg" alt="Safety Map" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Color-Coded Safety Map</h3>
+              <p class="feature-description">Navigate safely with our dynamic map highlighting areas based on real-time safety ratings — from green (safe) to red (high-risk).</p>
+              <a href="https://colorcodedmap.streamlit.app/" class="feature-link">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="images/rules.jpg" alt="Emergency Info" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Quick Emergency Information</h3>
+              <p class="feature-description">Access nearby emergency contacts, important rules, and guidelines quickly when you need them most.</p>
+              <a href="https://emergency-sangama.streamlit.app/" class="feature-link">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     
+<section id="explore" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">AI Travel Assistant Tools</h2>
+      <p class="section-description">Experience seamless journeys powered by AI — from smart itinerary planning to real-time translation and daily activity organization.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <img src="images/planner.avif" alt="Itinerary Planner" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">Smart Itinerary Planner</h3>
+          <p class="feature-description">Get a complete travel plan with suggested places, timings, commute options, and cultural highlights tailored to your preferences.</p>
+          <a href="https://san-itinerary-planner.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="images/task planner.avif" alt="Day Planner" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">AI Day Agent Planner</h3>
+          <p class="feature-description">Let our AI agent organize your daily activities, track your pace, and adapt the schedule in real time for a stress-free experience.</p>
+          <a href="https://sangama-planner.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+         <div class="feature-card">
+        <img src="images/translator.avif" alt="Real-Time Translation" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">Real-Time Translation</h3>
+          <p class="feature-description">Break language barriers instantly with on-the-go translation for signs, conversations, and important documents in local dialects.</p>
+          <a href="https://sangama-translator.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>     
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="about" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Sangama</h2>
+          <p class="section-description">Our mission is to preserve and promote India's rich cultural heritage while making it accessible to everyone.</p>
+        </div>
+        <div class="side-features">
+          <div class="side-feature">
+            <i class="fas fa-hiking side-feature-icon"></i>
+            <h3 class="side-feature-title">Immersive Journeys</h3>
+            <p class="side-feature-description">Creating engaging pathways through India's heritage landscapes.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-book-open side-feature-icon"></i>
+            <h3 class="side-feature-title">Knowledge Preservation</h3>
+            <p class="side-feature-description">Documenting oral traditions and intangible cultural heritage.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-users side-feature-icon"></i>
+            <h3 class="side-feature-title">Community Building</h3>
+            <p class="side-feature-description">Creating networks of cultural enthusiasts and practitioners.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-lightbulb side-feature-icon"></i>
+            <h3 class="side-feature-title">Innovation & Tradition</h3>
+            <p class="side-feature-description">Bridging ancient wisdom with contemporary relevance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Ready to Begin Your Cultural Journey?</h2>
+        <p>Take our personalized questionnaire to discover cultural experiences tailored just for you, or explore our curated collections to dive right in.</p>
+        <div class="final-cta-buttons">
+          <a href="qs.html" class="journey-btn"><i class="fas fa-map-marked-alt"></i> Start Your Culture Journey</a>
+          <a href="#explore" class="journey-btn"><i class="fas fa-compass"></i> Explore Collections</a>
+        </div>
+      </div>
+    </section>
+  
+ 
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          &copy; 2025 Sangama (Bharatiya Sanskriti). All rights reserved.
+        </div>
+      </div>
+    </footer>
+   <script>
+   
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const cards = document.querySelectorAll('.destination-card');
+  const sliderContainer = document.querySelector('.card-slider-container');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  
+  
+  const autoSlideDelay = 2500;
+  
+  let currentIndex = 0;
+  let autoSlideInterval;
+  let touchStartX = 0;
+  
+  
+  function updateVisibleCards() {
+    
+    cards.forEach(card => {
+      card.style.display = 'none';
+      card.classList.remove('active', 'left-card', 'right-card');
+    });
+    
+   
+    const totalCards = cards.length;
+    const prevIndex = (currentIndex - 1 + totalCards) % totalCards;
+    const nextIndex = (currentIndex + 1) % totalCards;
+   
+    cards[prevIndex].style.display = 'block';
+    cards[prevIndex].classList.add('left-card');
+    
+    cards[currentIndex].style.display = 'block';
+    cards[currentIndex].classList.add('active');
+    
+    cards[nextIndex].style.display = 'block';
+    cards[nextIndex].classList.add('right-card');
+  }
+  
+
+  function goToNext() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateVisibleCards();
+  }
+  
+  function goToPrev() {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateVisibleCards();
+}
+  
+  
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(goToNext, autoSlideDelay);
+  }
+  
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+  
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+  
+  
+  prevBtn.addEventListener('click', () => {
+    goToPrev();
+    resetAutoSlide();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    goToNext();
+    resetAutoSlide();
+  });
+
+  sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+  sliderContainer.addEventListener('mouseleave', startAutoSlide);
+  
+
+  sliderContainer.addEventListener('touchstart', (e) => {
+    stopAutoSlide();
+    touchStartX = e.touches[0].clientX;
+  });
+  
+  sliderContainer.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const swipeDiff = touchEndX - touchStartX;
+    
+    if (swipeDiff > 50) {
+      goToPrev(); 
+    } else if (swipeDiff < -50) {
+      goToNext(); 
+    }
+    
+    startAutoSlide();
+  });
+  
+
+  updateVisibleCards();
+  startAutoSlide();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.nav-container')) {
+      navLinks.classList.remove('active');
+    }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+   
+      navLinks.classList.remove('active');
+    });
+  });
+});
+   </script>
+  </body>
+  </html>

@@ -1,0 +1,10 @@
+2025-04-11 21:45:30,552 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-04-11 21:46:14,234 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 400 Bad Request"
+2025-04-11 21:46:14,235 - ERROR - Transcription error: Error code: 400 - {'error': {'message': 'Audio file is too short. Minimum audio length is 0.01 seconds.', 'type': 'invalid_request_error'}}
+2025-04-11 21:46:20,431 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 400 Bad Request"
+2025-04-11 21:46:20,432 - ERROR - Transcription error: Error code: 400 - {'error': {'message': 'Audio file is too short. Minimum audio length is 0.01 seconds.', 'type': 'invalid_request_error'}}
+2025-04-11 21:46:33,412 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 400 Bad Request"
+2025-04-11 21:46:33,414 - ERROR - Transcription error: Error code: 400 - {'error': {'message': 'Audio file is too short. Minimum audio length is 0.01 seconds.', 'type': 'invalid_request_error'}}
+2025-04-11 21:46:45,458 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-04-11 21:47:03,418 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-04-11 21:47:11,953 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"

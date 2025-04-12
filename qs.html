@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Journey Questionnaire - Culture Trail (Bharatiya Sanskriti)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-primary-light: #2c3e50;
+      --text-secondary-light: #555555;
+      --bg-primary-light: #f9f7f0;
+      --bg-secondary-light: #f5f0e4;
+      --accent-light: #FF6D24; 
+      --accent-secondary-light: #E63728; 
+      --border-light: #d5dbdb;
+      --gold-light: #d4af37;
+      
+      --text-primary-dark: #f8f9fa;
+      --text-secondary-dark: #adb5bd;
+      --bg-primary-dark: #1a1a2e;
+      --bg-secondary-dark: #16213e;
+      --accent-dark: #FF9933; 
+      --accent-secondary-dark: #ff7b00;
+      --border-dark: #495057;
+      --gold-dark: #ffd700;
+
+      --color1: #FF9933;       
+      --color2: #FFFFFF; 
+      --color3: #138808; 
+      --color4: #8D3DAF; 
+      --color5: #E91E63; 
+      --color6: #d4af37; 
+    }
+    
+    body {
+      font-family: 'Poppins', 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-primary-dark);
+      color: var(--text-primary-dark);
+      transition: all 0.3s ease;
+      line-height: 1.6;
+    }
+    
+    body.light-mode {
+      background-color: var(--bg-primary-light);
+      color: var(--text-primary-light);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+
+    header {
+      background-image: 
+        linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
+        url('https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    
+    .logo {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease;
+      color: var(--gold-dark);
+    }
+    
+    .light-mode .logo {
+      color: var(--gold-light);
+    }
+    
+    .tagline {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    nav {
+      background-color: var(--bg-primary-dark);
+      padding: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode nav {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-dark);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .light-mode .nav-logo {
+      color: var(--accent-light);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-primary-dark);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    .light-mode .nav-links a {
+      color: var(--text-primary-light);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: var(--accent-dark);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+    
+    .light-mode .nav-links a::after {
+      background-color: var(--accent-light);
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .nav-links a:hover {
+      color: var(--accent-light);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--accent-dark);
+      font-size: 1.8rem;
+    }
+    
+    .light-mode .hamburger {
+      color: var(--accent-light);
+    }
+
+    .questionnaire-section {
+      padding: 60px 0;
+    }
+    
+    .questionnaire-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .questionnaire-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .questionnaire-title {
+      color: var(--accent-light);
+    }
+    
+    .questionnaire-description {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .questionnaire-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .questionnaire-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--bg-secondary-dark);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease;
+    }
+    
+    .light-mode .questionnaire-container {
+      background-color: var(--bg-secondary-light);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .questionnaire-progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .progress-step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--bg-primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+      border: 2px solid var(--accent-dark);
+      color: var(--text-primary-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .progress-step {
+      background-color: var(--bg-primary-light);
+      color: var(--text-primary-light);
+      border-color: var(--accent-light);
+    }
+    
+    .progress-step.active {
+      background-color: var(--accent-dark);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    .light-mode .progress-step.active {
+      background-color: var(--accent-light);
+    }
+    
+    .progress-bar {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: var(--bg-primary-dark);
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    
+    .light-mode .progress-bar {
+      background-color: var(--bg-primary-light);
+    }
+    
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--color1), var(--color3));
+      transition: width 0.5s ease;
+      border-radius: 4px;
+    }
+    
+    .question-section {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .question-section.active {
+      display: block;
+    }
+    
+    .question {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--text-primary-dark);
+      font-weight: 600;
+    }
+    
+    .light-mode .question {
+      color: var(--text-primary-light);
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .option-item {
+      padding: 15px 20px;
+      border-radius: 10px;
+      background-color: var(--bg-primary-dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      border: 2px solid var(--border-dark);
+    }
+    
+    .light-mode .option-item {
+      background-color: var(--bg-primary-light);
+      border-color: var(--border-light);
+    }
+    
+    .option-item:hover {
+      transform: translateX(10px);
+      background-color: rgba(255, 153, 51, 0.1);
+      border-color: var(--accent-dark);
+    }
+    
+    .light-mode .option-item:hover {
+      background-color: rgba(255, 109, 36, 0.1);
+      border-color: var(--accent-light);
+    }
+    
+    .option-item.selected {
+      background-color: rgba(255, 153, 51, 0.2);
+      border-color: var(--accent-dark);
+      position: relative;
+      padding-right: 40px;
+    }
+    
+    .light-mode .option-item.selected {
+      background-color: rgba(255, 109, 36, 0.2);
+      border-color: var(--accent-light);
+    }
+    
+    .option-item.selected::after {
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .option-item.selected::after {
+      color: var(--accent-light);
+    }
+    
+    .option-text {
+      font-size: 1.1rem;
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .option-text {
+      color: var(--text-primary-light);
+    }
+    
+    .question-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .prev-btn, .next-btn, .submit-btn {
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .prev-btn {
+      background-color: transparent;
+      color: var(--text-secondary-dark);
+      border: 2px solid var(--border-dark);
+    }
+    
+    .light-mode .prev-btn {
+      color: var(--text-secondary-light);
+      border-color: var(--border-light);
+    }
+    
+    .prev-btn:hover {
+      background-color: var(--bg-primary-dark);
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .prev-btn:hover {
+      background-color: var(--bg-primary-light);
+      color: var(--text-primary-light);
+    }
+    
+    .next-btn, .submit-btn {
+      background-color: var(--accent-dark);
+      color: white;
+      box-shadow: 0 5px 15px rgba(255, 153, 51, 0.3);
+    }
+    
+    .light-mode .next-btn, .light-mode .submit-btn {
+      background-color: var(--accent-light);
+      box-shadow: 0 5px 15px rgba(255, 109, 36, 0.3);
+    }
+    
+    .next-btn:hover, .submit-btn:hover {
+      background-color: var(--accent-secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 153, 51, 0.4);
+    }
+    
+    .light-mode .next-btn:hover, .light-mode .submit-btn:hover {
+      background-color: var(--accent-secondary-light);
+      box-shadow: 0 8px 20px rgba(255, 109, 36, 0.4);
+    }
+    
+    .submit-btn {
+      display: none;
+    }
+
+    .question-section[data-question="5"] .submit-btn {
+  display: block !important;
+}
+
+    .results-section {
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+    
+    .results-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .results-title {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .results-title {
+      color: var(--accent-light);
+    }
+    
+    .results-description {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .results-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .results-container {
+      background-color: var(--bg-primary-dark);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+    
+    .light-mode .results-container {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .result-item {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+    
+    .light-mode .result-item {
+      border-bottom-color: var(--border-light);
+    }
+    
+    .result-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .result-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--accent-dark);
+      }
+      
+      .light-mode .result-title {
+        color: var(--accent-light);
+      }
+      
+      .result-text {
+        font-size: 1rem;
+        color: var(--text-secondary-dark);
+      }
+      
+      .light-mode .result-text {
+        color: var(--text-secondary-light);
+      }
+      
+      .cultural-match {
+        margin-top: 40px;
+        text-align: center;
+      }
+      
+      .match-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: var(--gold-dark);
+      }
+      
+      .light-mode .match-title {
+        color: var(--gold-light);
+      }
+      
+      .match-card {
+        background: linear-gradient(135deg, var(--bg-primary-dark), var(--bg-secondary-dark));
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        text-align: center;
+        border: 2px solid var(--accent-dark);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .light-mode .match-card {
+        background: linear-gradient(135deg, var(--bg-primary-light), var(--bg-secondary-light));
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-color: var(--accent-light);
+      }
+      
+      .match-card::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--accent-dark);
+        opacity: 0.1;
+        border-radius: 50%;
+      }
+      
+      .light-mode .match-card::before {
+        background-color: var(--accent-light);
+      }
+      
+      .match-card::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--accent-dark);
+        opacity: 0.1;
+        border-radius: 50%;
+      }
+      
+      .light-mode .match-card::after {
+        background-color: var(--accent-light);
+      }
+      
+      .match-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        border: 3px solid var(--gold-dark);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+      
+      .light-mode .match-image {
+        border-color: var(--gold-light);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .match-name {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: var(--text-primary-dark);
+      }
+      
+      .light-mode .match-name {
+        color: var(--text-primary-light);
+      }
+      
+      .match-description {
+        color: var(--text-secondary-dark);
+        margin-bottom: 20px;
+      }
+      
+      .light-mode .match-description {
+        color: var(--text-secondary-light);
+      }
+      
+      .match-stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+      }
+      
+      .stat-item {
+        text-align: center;
+      }
+      
+      .stat-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--accent-dark);
+      }
+      
+      .light-mode .stat-value {
+        color: var(--accent-light);
+      }
+      
+      .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary-dark);
+      }
+      
+      .light-mode .stat-label {
+        color: var(--text-secondary-light);
+      }
+      
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      
+      .restart-btn, .share-btn {
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .restart-btn {
+        background-color: transparent;
+        color: var(--text-secondary-dark);
+        border: 2px solid var(--border-dark);
+      }
+      
+      .light-mode .restart-btn {
+        color: var(--text-secondary-light);
+        border-color: var(--border-light);
+      }
+      
+      .restart-btn:hover {
+        background-color: var(--bg-primary-dark);
+        color: var(--text-primary-dark);
+      }
+      
+      .light-mode .restart-btn:hover {
+        background-color: var(--bg-primary-light);
+        color: var(--text-primary-light);
+      }
+      
+      .share-btn {
+        background-color: var(--accent-dark);
+        color: white;
+        box-shadow: 0 5px 15px rgba(255, 153, 51, 0.3);
+      }
+      
+      .light-mode .share-btn {
+        background-color: var(--accent-light);
+        box-shadow: 0 5px 15px rgba(255, 109, 36, 0.3);
+      }
+      
+      .share-btn:hover {
+        background-color: var(--accent-secondary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 153, 51, 0.4);
+      }
+      
+      .light-mode .share-btn:hover {
+        background-color: var(--accent-secondary-light);
+        box-shadow: 0 8px 20px rgba(255, 109, 36, 0.4);
+      }
+      
+     
+      .theme-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--accent-dark);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 100;
+        transition: all 0.3s ease;
+        border: none;
+        font-size: 1.3rem;
+      }
+      
+      .light-mode .theme-toggle {
+        background-color: var(--accent-light);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .theme-toggle:hover {
+        transform: scale(1.1);
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .logo {
+          font-size: 2.2rem;
+        }
+        
+        .tagline {
+          font-size: 1.2rem;
+        }
+        
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: a0;
+          width: 100%;
+          background-color: var(--bg-primary-dark);
+          padding: 20px;
+          flex-direction: column;
+          align-items: center;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .light-mode .nav-links {
+          background-color: var(--bg-primary-light);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links.active {
+          display: flex;
+        }
+        
+        .hamburger {
+          display: block;
+        }
+        
+        .questionnaire-container {
+          padding: 30px 20px;
+        }
+        
+        .match-stats {
+          flex-direction: column;
+          gap: 15px;
+        }
+        
+        .action-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        
+        .restart-btn, .share-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+  </style>
+</head>
+<body>
+  <div id="usernameModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 9999;">
+    <div style="background: white; padding: 30px; border-radius: 10px; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <h2 style="color: #E63728; margin-bottom: 20px;">Welcome Explorer!</h2>
+      <p style="color: #444; margin-bottom: 20px;">Enter your name to begin your travel personality journey ✈️</p>
+      <input type="text" id="usernameInput" placeholder="Your Name" style="padding: 10px 15px; border-radius: 5px; width: 100%; margin-bottom: 20px; border: 1px solid #ccc; font-size: 16px;">
+      <button onclick="submitName()" style="padding: 10px 20px; border: none; background: #FF6D24; color: white; border-radius: 5px; cursor: pointer; font-weight: bold;">Let's Go!</button>
+    </div>
+  </div>
+  
+    <nav>
+      <div class="container nav-container">
+        <a href="#" class="nav-logo">Yatra AI</a>
+        <div class="nav-links">
+          <a href='/'>Home</a>
+          <a href="#">About</a>
+          <a href="#">Culture Trail</a>
+        </div>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  
+    <header>
+      <div class="container">
+        <h1 class="logo">Yatra AI</h1>
+        <p class="tagline">Discover Your Connection to India's Rich Cultural Heritage</p>
+      </div>
+    </header>
+  
+   
+    <section class="questionnaire-section">
+      <div class="container">
+        <div class="questionnaire-header">
+          <h2 class="questionnaire-title">Cultural Heritage Questionnaire</h2>
+          <p class="questionnaire-description">
+            Answer these questions to discover which aspects of Indian culture resonate most with you. 
+            Your journey through India's rich tapestry of traditions begins here.
+          </p>
+        </div>
+        
+        <div class="questionnaire-container" id="questionnaire">
+          <div class="questionnaire-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-step" data-step="3">3</div>
+            <div class="progress-step" data-step="4">4</div>
+            <div class="progress-step" data-step="5">5</div>
+          </div>
+          
+          <div class="question-section active" data-question="1">
+            <h3 class="question">Which of these Indian festivals intrigues you the most?</h3>
+            <div class="options">
+              <div class="option-item" data-value="spiritual">
+                <span class="option-text">Diwali - The festival of lights representing the victory of light over darkness</span>
+              </div>
+              <div class="option-item" data-value="culinary">
+                <span class="option-text">Holi - The vibrant festival of colors and festive foods</span>
+              </div>
+              <div class="option-item" data-value="artistic">
+                <span class="option-text">Durga Puja - Elaborate artistic pandals and cultural performances</span>
+              </div>
+              <div class="option-item" data-value="philosophical">
+                <span class="option-text">Mahashivaratri - Night-long meditation and philosophical contemplation</span>
+              </div>
+              <div class="option-item" data-value="historical">
+                <span class="option-text">Republic Day - Celebration of India's constitution and historical journey</span>
+              </div>
+            </div>
+            <div class="question-buttons">
+              <button class="prev-btn" disabled>Previous</button>
+              <button class="next-btn">Next Question</button>
+            </div>
+          </div>
+          
+ 
+          <div class="question-section" data-question="2">
+            <h3 class="question">If you could bring one aspect of Indian culture into your daily life, what would it be?</h3>
+            <div class="options">
+              <div class="option-item" data-value="spiritual">
+                <span class="option-text">Yoga and meditation practices for mindfulness</span>
+              </div>
+              <div class="option-item" data-value="culinary">
+                <span class="option-text">Traditional Indian cooking with aromatic spices</span>
+              </div>
+              <div class="option-item" data-value="artistic">
+                <span class="option-text">Classical art forms like dance, music, or painting</span>
+            </div>
+            <div class="option-item" data-value="philosophical">
+              <span class="option-text">Ancient wisdom from texts like the Bhagavad Gita or Upanishads</span>
+            </div>
+            <div class="option-item" data-value="historical">
+              <span class="option-text">Stories and legends from India's rich historical tapestry</span>
+            </div>
+          </div>
+          <div class="question-buttons">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next Question</button>
+          </div>
+          </div>
+    
+          <div class="question-section" data-question="3">
+          <h3 class="question">Which Indian cultural environment would you most like to experience?</h3>
+          <div class="options">
+            <div class="option-item" data-value="spiritual">
+              <span class="option-text">A serene ashram in Rishikesh along the holy Ganges river</span>
+            </div>
+            <div class="option-item" data-value="culinary">
+              <span class="option-text">A bustling local market filled with spices and street food in Delhi</span>
+            </div>
+            <div class="option-item" data-value="artistic">
+              <span class="option-text">A traditional arts village in Rajasthan showcasing local crafts and performances</span>
+            </div>
+            <div class="option-item" data-value="philosophical">
+              <span class="option-text">A scholarly discussion on ancient texts at a traditional Gurukul</span>
+            </div>
+            <div class="option-item" data-value="historical">
+              <span class="option-text">Exploring ancient temples and architectural marvels in Hampi or Khajuraho</span>
+            </div>
+          </div>
+          <div class="question-buttons">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next Question</button>
+          </div>
+          </div>
+      
+          <div class="question-section" data-question="4">
+          <h3 class="question">Which aspect of Indian philosophy resonates with you most?</h3>
+          <div class="options">
+            <div class="option-item" data-value="spiritual">
+              <span class="option-text">The concept of moksha - liberation from the cycle of rebirth</span>
+            </div>
+            <div class="option-item" data-value="culinary">
+              <span class="option-text">Ayurveda - the balance of elements and tastes for holistic health</span>
+            </div>
+            <div class="option-item" data-value="artistic">
+              <span class="option-text">The Navarasa - nine emotions expressed through classical arts</span>
+            </div>
+            <div class="option-item" data-value="philosophical">
+              <span class="option-text">The concept of dharma - personal duty and ethical living</span>
+            </div>
+            <div class="option-item" data-value="historical">
+              <span class="option-text">Artha - the pursuit of prosperity and material well-being</span>
+            </div>
+          </div>
+          <div class="question-buttons">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next Question</button>
+          </div>
+          </div>
+
+          <div class="question-section" data-question="5">
+          <h3 class="question">If you could learn one traditional Indian skill, what would it be?</h3>
+          <div class="options">
+            <div class="option-item" data-value="spiritual">
+              <span class="option-text">Advanced yoga and pranayama (breath control) techniques</span>
+            </div>
+            <div class="option-item" data-value="culinary">
+              <span class="option-text">Traditional Indian cooking from different regions</span>
+            </div>
+            <div class="option-item" data-value="artistic">
+              <span class="option-text">Classical Indian dance forms like Bharatanatyam or Kathak</span>
+            </div>
+            <div class="option-item" data-value="philosophical">
+              <span class="option-text">Sanskrit language to study ancient texts in their original form</span>
+            </div>
+            <div class="option-item" data-value="historical">
+              <span class="option-text">Traditional architecture and temple design principles</span>
+            </div>
+          </div>
+          <div class="question-buttons">
+            <button class="prev-btn">Previous</button>
+            <button class="submit-btn">See Results</button>
+          </div>
+          </div>
+          </div>
+          
+          <div class="results-section" id="results">
+          <div class="results-header">
+            <h2 class="results-title">Your Cultural Connection</h2>
+            <p class="results-description">
+              Based on your responses, here's how you connect with India's cultural heritage. 
+              Explore your primary connection and discover what it means for your cultural journey.
+            </p>
+          </div>
+          
+          <div class="results-container">
+            <div class="result-item">
+              <h3 class="result-title">Your Cultural Profile</h3>
+              <p class="result-text" id="profileDescription"></p>
+            </div>
+            <div class="result-item">
+              <h3 class="result-title">Key Interests</h3>
+              <p class="result-text" id="keyInterests"></p>
+            </div>
+            <div class="result-item">
+              <h3 class="result-title">Recommended Experiences</h3>
+              <p class="result-text" id="recommendedExperiences"></p>
+            </div>
+          </div>
+          
+          <div class="cultural-match">
+            <h3 class="match-title">Your Cultural Alignment</h3>
+            <div class="match-card">
+              <img id="matchImage" class="match-image" src="/api/placeholder/150/150" alt="Cultural Alignment Image">
+              <h4 class="match-name" id="matchName"></h4>
+              <p class="match-description" id="matchDescription"></p>
+              <div class="match-stats">
+                <div class="stat-item">
+                  <div class="stat-value" id="primaryPercentage">85%</div>
+                  <div class="stat-label">Primary Match</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value" id="secondaryPercentage">42%</div>
+                  <div class="stat-label">Secondary Match</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="restart-btn" id="restartBtn">
+              <i class="fas fa-redo"></i> Take Again
+            </button>
+            <button class="share-btn" id="shareBtn">
+              <i class="fas fa-share-alt"></i> Share Results
+            </button>
+          </div>
+          </div>
+          </div>
+          </section>
+          
+        
+          <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+          </button>
+
+       
+          <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+         
+          <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+         
+          <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+          <script>
+            let globalUserName = '';
+          
+            function submitName() {
+              const name = document.getElementById('usernameInput').value.trim();
+              if (!name) {
+                alert("Please enter your name to continue.");
+                return;
+              }
+              globalUserName = name;
+              document.getElementById('usernameModal').style.display = 'none';
+              document.querySelector('.tagline').innerHTML = `Hello <strong>${name}</strong>, ready for a fun quiz?`;
+          
+       
+              const db = firebase.firestore();
+              db.collection("user_names").add({
+                name: name,
+                timestamp: firebase.firestore.Timestamp.fromDate(new Date())
+              }).then(() => {
+                console.log("Name stored successfully");
+              });
+            }
+          
+            window.addEventListener('load', function() {
+              document.getElementById('usernameModal').style.display = 'flex';
+            });
+          </script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+        
+            const firebaseConfig = {
+              apiKey: "AIzaSyDPXvNb2JDeNA4g3U7l-I3H0v9cRol9hgM",
+              authDomain: "cultural-questionnaire.firebaseapp.com",
+              databaseURL: "https://cultural-questionnaire-default-rtdb.firebaseio.com",
+              projectId: "cultural-questionnaire",
+              storageBucket: "cultural-questionnaire.firebasestorage.app",
+              messagingSenderId: "117362372051",
+              appId: "1:117362372051:web:3f7cc6bdd705ba831b5326",
+              measurementId: "G-LD6K9TXZXP"
+            };
+       
+            firebase.initializeApp(firebaseConfig);
+           
+            const db = firebase.firestore();
+            
+           
+            const analytics = firebase.analytics();
+            
+            
+            analytics.logEvent('quiz_started');
+
+          
+            let currentQuestion = 1;
+            const totalQuestions = 5;
+            let userSelections = [];
+            let themeDark = true;
+            let startTime = new Date(); // Track when the quiz started
+            
+           
+            const progressFill = document.getElementById('progressFill');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            const questionSections = document.querySelectorAll('.question-section');
+            const prevBtns = document.querySelectorAll('.prev-btn');
+            const nextBtns = document.querySelectorAll('.next-btn');
+            const submitBtn = document.querySelector('.submit-btn');
+            const optionItems = document.querySelectorAll('.option-item');
+            const hamburgerBtn = document.getElementById('hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const themeToggle = document.getElementById('themeToggle');
+            const questionnaire = document.getElementById('questionnaire');
+            const results = document.getElementById('results');
+            const restartBtn = document.getElementById('restartBtn');
+            const shareBtn = document.getElementById('shareBtn');
+           
+            const profileData = {
+              spiritual: {
+                name: "Spiritual Seeker",
+                description: "You are drawn to the spiritual aspects of Indian culture. The concepts of inner peace, meditation, and connection to something greater resonate with you deeply.",
+                interests: "Yoga, meditation, spirituality, ashrams, sacred texts, temples, and holistic living.",
+                experiences: "Visit Rishikesh or Varanasi for spiritual retreats, learn traditional yoga from masters, explore ancient temples, and participate in meditation workshops.",
+                image: "images/badge.png"
+              },
+              culinary: {
+                name: "Culinary Explorer",
+                description: "The rich flavors and diverse culinary traditions of India captivate your senses. You appreciate the cultural significance of food in Indian heritage.",
+                interests: "Regional cuisines, spices, cooking techniques, food festivals, street food, and traditional dietary practices.",
+                experiences: "Take cooking classes in different Indian regions, explore local markets, participate in food festivals, and learn about Ayurvedic cooking principles.",
+                image: "images/badge.png" 
+              },
+              artistic: {
+                name: "Creative Appreciator",
+                description: "You resonate with India's rich artistic and creative expressions. The vibrant colors, intricate patterns, and expressive performances speak to your aesthetic sensibilities.",
+                interests: "Classical dance, music, visual arts, textiles, crafts, architecture, and contemporary Indian creative expressions.",
+                experiences: "Learn a classical dance form, attend music concerts, visit art villages in Rajasthan, participate in art workshops, and explore India's architectural wonders.",
+                image: "images/badge.png" 
+              },
+              philosophical: {
+                name: "Philosophical Thinker",
+                description: "The deep philosophical traditions of India intrigue you. You appreciate the profound wisdom and contemplative aspects of Indian thought.",
+                interests: "Ancient texts, philosophical schools, ethical concepts, scholarly discussions, and the integration of philosophy with daily life.",
+                experiences: "Study texts like the Upanishads or Bhagavad Gita with scholars, attend philosophical discourses, learn Sanskrit, and explore the intellectual heritage of India.",
+                image: "images/badge.png" 
+              },
+              historical: {
+                name: "Heritage Enthusiast",
+                description: "India's rich historical tapestry and cultural evolution fascinate you. You value the preservation and understanding of traditional knowledge and heritage.",
+                interests: "Historical sites, ancient civilizations, architectural marvels, traditional crafts, and the stories behind cultural practices.",
+                experiences: "Explore UNESCO heritage sites, visit historical museums, participate in archaeological tours, and learn about traditional craft preservation.",
+                image: "images/badge.png" 
+              }
+            };
+            
+           
+            updateProgress();
+         
+            optionItems.forEach(item => {
+              item.addEventListener('click', function() {
+                const currentOptions = this.parentElement.querySelectorAll('.option-item');
+                currentOptions.forEach(option => option.classList.remove('selected'));
+                this.classList.add('selected');
+              });
+            });
+            
+            prevBtns.forEach(btn => {
+              btn.addEventListener('click', goToPreviousQuestion);
+            });
+            
+            nextBtns.forEach(btn => {
+              btn.addEventListener('click', goToNextQuestion);
+            });
+            
+            submitBtn.addEventListener('click', submitQuiz);
+            
+            hamburgerBtn.addEventListener('click', function() {
+              navLinks.classList.toggle('active');
+            });
+            
+            themeToggle.addEventListener('click', toggleTheme);
+            
+            restartBtn.addEventListener('click', restartQuiz);
+            
+            shareBtn.addEventListener('click', shareResults);
+            
+        
+            function goToNextQuestion() {
+              const currentQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
+              const selectedOption = currentQuestionSection.querySelector('.option-item.selected');
+              
+              if (!selectedOption) {
+               
+                alert('Please select an option before proceeding.');
+                return;
+              }
+              
+              
+              userSelections[currentQuestion - 1] = selectedOption.getAttribute('data-value');
+              
+              
+              analytics.logEvent('question_answered', {
+                question_number: currentQuestion,
+                answer_value: userSelections[currentQuestion - 1]
+              });
+              
+              
+              currentQuestionSection.classList.remove('active');
+              
+              
+              currentQuestion++;
+              
+             
+              const nextQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
+              nextQuestionSection.classList.add('active');
+              
+              
+              updateProgress();
+            }
+            
+            function goToPreviousQuestion() {
+              
+              const currentQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
+              currentQuestionSection.classList.remove('active');
+              
+              currentQuestion--;
+              
+              
+              const prevQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
+              prevQuestionSection.classList.add('active');
+             
+              updateProgress();
+            }
+            
+            function updateProgress() {
+              
+              const progressPercentage = ((currentQuestion - 1) / totalQuestions) * 100;
+              progressFill.style.width = `${progressPercentage}%`;
+              
+           
+              progressSteps.forEach(step => {
+                const stepNum = parseInt(step.getAttribute('data-step'));
+                if (stepNum === currentQuestion) {
+                  step.classList.add('active');
+                } else {
+                  step.classList.remove('active');
+                }
+              });
+              
+              
+              const prevBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .prev-btn`);
+              if (currentQuestion === 1) {
+                prevBtn.disabled = true;
+              } else {
+                prevBtn.disabled = false;
+              }
+            
+              if (currentQuestion === totalQuestions) {
+                const lastQuestionNextBtn = document.querySelector(`.question-section[data-question="${totalQuestions}"] .next-btn`);
+                const lastQuestionSubmitBtn = document.querySelector(`.question-section[data-question="${totalQuestions}"] .submit-btn`);
+                
+                if (lastQuestionNextBtn) {
+                  lastQuestionNextBtn.style.display = 'none';
+                }
+                
+                if (lastQuestionSubmitBtn) {
+                  lastQuestionSubmitBtn.style.display = 'block';
+                }
+              } else {
+               
+                const currentNextBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .next-btn`);
+                if (currentNextBtn) {
+                  currentNextBtn.style.display = 'block';
+                }
+                
+               
+                const currentSubmitBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .submit-btn`);
+                if (currentSubmitBtn) {
+                  currentSubmitBtn.style.display = 'none';
+                }
+              }
+            }
+            
+            function submitQuiz() {
+             
+              const lastQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
+              const selectedOption = lastQuestionSection.querySelector('.option-item.selected');
+              
+              if (!selectedOption) {
+                alert('Please select an option before submitting.');
+                return;
+              }
+              
+              
+              userSelections[currentQuestion - 1] = selectedOption.getAttribute('data-value');
+              
+            
+              const result = calculateResult();
+              
+              
+              saveResultsToFirebase(userSelections, result);
+              
+             
+              displayResults(result);
+              
+             
+              questionnaire.style.display = 'none';
+              results.style.display = 'block';
+              
+              
+              analytics.logEvent('quiz_completed', {
+                completion_time_seconds: (new Date() - startTime) / 1000,
+                primary_match: result.primary.match,
+                primary_percentage: result.primary.percentage
+              });
+            }
+            
+            function saveResultsToFirebase(selections, result) {
+              
+              const timestamp = new Date();
+              
+             
+              let userId = localStorage.getItem('cultural_quiz_user_id');
+              if (!userId) {
+                userId = 'user_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('cultural_quiz_user_id', userId);
+              }
+              
+        
+              const submissionData = {
+                userId: userId,
+                timestamp: firebase.firestore.Timestamp.fromDate(timestamp),
+                selections: selections,
+                primaryMatch: result.primary.match,
+                primaryPercentage: result.primary.percentage,
+                secondaryMatch: result.secondary.match,
+                secondaryPercentage: result.secondary.percentage,
+                userAgent: navigator.userAgent,
+                completionTimeSeconds: (timestamp - startTime) / 1000
+              };
+              
+            
+              db.collection("quiz_submissions").add(submissionData)
+                .then((docRef) => {
+                  console.log("Document written with ID: ", docRef.id);
+                })
+                .catch((error) => {
+                  console.error("Error adding document: ", error);
+                });
+            }
+            
+            function calculateResult() {
+             
+              const counts = {
+                spiritual: 0,
+                culinary: 0,
+                artistic: 0,
+                philosophical: 0,
+                historical: 0
+              };
+              
+              userSelections.forEach(selection => {
+                counts[selection]++;
+              });
+              
+              
+              let primaryMatch = 'spiritual'; 
+              let primaryCount = 0;
+              let secondaryMatch = 'spiritual'; 
+              let secondaryCount = 0;
+              
+              for (const [category, count] of Object.entries(counts)) {
+                if (count > primaryCount) {
+                  secondaryMatch = primaryMatch;
+                  secondaryCount = primaryCount;
+                  primaryMatch = category;
+                  primaryCount = count;
+                } else if (count > secondaryCount) {
+                  secondaryMatch = category;
+                  secondaryCount = count;
+                }
+              }
+              
+              
+              const primaryPercentage = Math.round((primaryCount / totalQuestions) * 100);
+              const secondaryPercentage = Math.round((secondaryCount / totalQuestions) * 100);
+              
+              return {
+                primary: {
+                  match: primaryMatch,
+                  percentage: primaryPercentage
+                },
+                secondary: {
+                  match: secondaryMatch,
+                  percentage: secondaryPercentage
+                }
+              };
+            }
+            
+            function displayResults(result) {
+              
+              const primaryProfile = profileData[result.primary.match];
+              const secondaryProfile = profileData[result.secondary.match];
+              
+              document.getElementById('profileDescription').textContent = primaryProfile.description;
+              
+             
+              document.getElementById('keyInterests').textContent = primaryProfile.interests;
+              
+    
+              document.getElementById('recommendedExperiences').textContent = primaryProfile.experiences;
+              
+         
+              document.getElementById('matchImage').src = primaryProfile.image;
+              document.getElementById('matchImage').alt = primaryProfile.name;
+              document.getElementById('matchName').textContent = primaryProfile.name;
+              document.getElementById('matchDescription').textContent = 
+                `Your results show a strong connection to the ${primaryProfile.name.toLowerCase()} aspect of Indian culture, with a secondary connection to the ${secondaryProfile.name.toLowerCase()} dimension.`;
+              
+    
+              document.getElementById('primaryPercentage').textContent = `${result.primary.percentage}%`;
+              document.getElementById('secondaryPercentage').textContent = `${result.secondary.percentage}%`;
+            }
+            
+            function restartQuiz() {
+      
+              currentQuestion = 1;
+              userSelections = [];
+              startTime = new Date(); 
+              
+         
+              document.querySelectorAll('.option-item').forEach(item => {
+                item.classList.remove('selected');
+              });
+              
+              
+              results.style.display = 'none';
+              questionnaire.style.display = 'block';
+              
+              
+              questionSections.forEach(section => {
+                section.classList.remove('active');
+              });
+              questionSections[0].classList.add('active');
+             
+              updateProgress();
+              
+    
+              analytics.logEvent('quiz_restarted');
+            }
+            
+            function shareResults() {
+              
+              alert('Sharing functionality would be implemented here. This could include social media sharing, generating a link, or creating a shareable image of results.');
+              
+              analytics.logEvent('results_shared');
+            }
+            
+            function toggleTheme() {
+              const body = document.body;
+              const moonIcon = '<i class="fas fa-moon"></i>';
+              const sunIcon = '<i class="fas fa-sun"></i>';
+              
+              body.classList.toggle('light-mode');
+              themeDark = !themeDark;
+              
+              if (themeDark) {
+                themeToggle.innerHTML = moonIcon;
+              } else {
+                themeToggle.innerHTML = sunIcon;
+              }
+              
+             
+              analytics.logEvent('theme_changed', {
+                theme: themeDark ? 'dark' : 'light'
+              });
+            }
+          });
+          </script>
+</body>
+</html>
